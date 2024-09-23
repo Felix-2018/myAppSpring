@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
+<body>
+	<div layout:fragment="content">
+		<div class="pagetitle">
+		  <h1>Components</h1>
+		  <nav>
+		    <ol class="breadcrumb">
+		      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		      <li class="breadcrumb-item">Components</li>
+		      <li class="breadcrumb-item active">Data</li>
+		    </ol>
+		  </nav>
+		</div>
+		<h1>Welcome to Help Desk Department</h1>
+		<div class="row">
+				  <div class="col-lg-4">
+				    <div class="card">
+				      <div class="card-block">
+				        <center><h3 class="card-title">General Tickets </h3>
+				        <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>!-->
+				        <a href="/tickets" class="btn btn-primary">Manage Tickets</a>
+				      </div></center></br>
+				    </div>
+				  </div>
+				  <div class="col-sm-4">
+				    <div class="card">
+				      <div class="card-block">
+				        <center><h3 class="card-title">Ticket Status</h3>
+				        <a href="/ticketstatus" class="btn btn-primary">Manage Ticket Status</a></center></br>
+				      </div>
+				    </div>
+				  </div>
+				
+				</div>
+	</div>
+
+</body>
+</html>

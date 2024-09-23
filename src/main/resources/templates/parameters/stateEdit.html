@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit State</title>
+</head>
+
+	  <div align="center">
+	        <h1>Edit State</h1>
+	        <br />
+	        <form action="#" th:action="@{/states}"  th:object="${state}"  method="post">	 
+	            <table border="0" cellpadding="10">  
+					<tr>             
+					    <td>State ID:</td>
+					    <td>
+					        <input type="text" th:field="*{id}" readonly="readonly" />
+					    </td>
+					</tr>       
+	                <tr>             
+	                    <td>Capital:</td>
+	                    <td>
+	                        <input type="text" th:field="*{capital}" />
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>Country ID:</td>
+						
+	                    
+							<td><input type="text" th:field="*{countryid}" />
+						</td>
+	                </tr>
+	                <tr>
+	                    <td>Code:</td>
+	                    <td><input type="text" th:field="*{code}" /></td>
+	                </tr>
+	                <tr>
+	                    <td>Details:</td>
+	                    <td><input type="text" th:field="*{details}" /></td>
+	                </tr>      
+					<tr>
+					    <td>Name:</td>
+					    <td><input type="text" th:field="*{name}" /></td>
+					</tr>                          
+	                <tr>
+	                    <td colspan="2"><button type="submit" class="btn btn-success">Save</button> &nbsp;&nbsp;&nbsp;<a th:href="@{/states}" button type="cancel" class="btn btn-success">Cancel</button></a>
+						</td>
+	                </tr>
+	            </table>
+	        </form>
+	    </div>
+	</body>
+</html>

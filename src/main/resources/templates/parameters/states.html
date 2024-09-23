@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
+<body>
+	<div layout:fragment="content">
+
+		<div class="pagetitle">
+		  <h1>Components</h1>
+		  <nav>
+		    <ol class="breadcrumb">
+		      <li class="breadcrumb-item"><a href="/parameters">Home</a></li>
+		    
+		      <li class="breadcrumb-item active">States</li>
+		    </ol>
+		  </nav>
+		</div>
+
+		<h1>state List</h1>
+		<div class="row">
+		       <div class="col-lg-12">
+
+		         <div class="card">
+		           <div class="card-body">
+		             </br>
+					<a href="/stateAdd" class="btn btn-primary">Create New state</a>
+		             <!-- Table with stripped rows -->
+		             <table class="table datatable">
+		               <thead>
+		                 <tr>
+		                   <th>
+		                    Capital
+		                   </th>
+		                   <th>Code</th>
+		                   <th>state ID</th>
+		                   <th>Details</th>
+						   <th>Name</th>
+						   <th>Action</th>
+		                 </tr>
+		               </thead>
+		               <tbody>
+		                 <tr th:each="state : ${states}">
+                            <td th:text="${state.capital}"></td>
+							<td th:text="${state.code}"></td>
+							<td th:text="${state.countryid}"></td>
+							<td th:text="${state.details}"></td>
+							<td th:text="${state.name}"></td>
+							<td>							<a th:href="@{/parameters/states/__${state.id}__}"class="btn btn-warning" >
+																			  Edit
+																			</button></a>			
+														<!--<a class="btn btn-success" th:href="@{/stateEdit/__${state.id}__}" >Edit</a>
+								!--->			    
+								        &nbsp;&nbsp;&nbsp;
+		<a class="btn btn-danger" onclick="return confirm('Are sure sure you want to delete this record?')" th:href="@{/state/delete/__${state.id}__}" >Delete</a></td>
+		                 </tr>
+						 <div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+						           <div class="modal-dialog" role="document">
+						             <div class="modal-content">
+						               <div class="modal-header">
+						                 <h5 class="modal-title">Edit State</h5>
+						                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						               </div>
+						               <div class="modal-body">
+										<form class="row g-3" th:action="@{/states}" th:object="${state}" method="post">
+																	<div class="col-12">
+																	 <label for="inputNanme4" class="form-label">ID</label>
+																  <input type="text"name="id" id="idEdit" class="form-control"  required>
+												                     </div>
+															<div class="col-12">
+													                    <label for="inputNanme4" class="form-label">Capital</label>
+													                    <input type="text"name="capital" id="capitalEdit" class="form-control"  required>
+													                  </div>
+													                  <div class="col-12">
+													                    <label for="inputCode" class="form-label">Code</label>
+													                    <input type="text" name="code" id="codeEdit" class="form-control"  required>
+													                  </div>
+																	  <div class="col-12">
+																	  	 <label for="inputCodes" class="form-label">Country</label>
+																	      <input type="text" name="countryid" id="countryidEdit" class="form-control"  required>
+																	  </div>
+													          
+													                  <div class="col-12">
+													                    <label for="inputAddress" class="form-label">Details</label>
+													                    <input type="text" name="details" id="detailsEdit" class="form-control"  required>
+													                  </div>
+																	  <div class="col-12">
+																	    <label for="inputAddres" class="form-label">Name</label>
+												                        <input type="text" name="name" id="nameEdit" class="form-control" required>
+											             			 </div>
+																	  <div class="panel-body">
+													                    <button type="submit" class="btn btn-success">Save</button>
+													                    <a href="/states" class="btn btn-warning">Exit</a>
+													                  </div>
+													                </form><!-- Vertical Form -->
+
+
+						               </div>
+						             </div>
+						           </div>
+		               </tbody>
+		             </table>
+		             <!-- End Table with stripped rows -->
+
+		           </div>
+		         </div>
+
+		       </div>
+		     </div>
+	</div>
+
+</body>
+</html>

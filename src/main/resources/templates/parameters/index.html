@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
+<body>
+	<div layout:fragment="content">
+		
+		   <div class="pagetitle">
+		     <h1>Components</h1>
+		     <nav>
+		       <ol class="breadcrumb">
+		         <li class="breadcrumb-item"><a href="/parameters">Home</a></li>
+		         <li class="breadcrumb-item">Settings Page</li>
+		         <li class="breadcrumb-item active">Pages</li>
+		       </ol>
+		     </nav>
+		   </div>
+
+		<h2>Welcome to Settings Page</h2>
+		<div class="row">
+		  <div class="col-lg-4">
+		    <div class="card">
+		      <div class="card-block">
+		        <center><h3 class="card-title">Countries</h3>
+		        <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>!-->
+		        <a href="/countries" class="btn btn-primary">Manage Countries</a>
+		      </div></center></br>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-block">
+		        <center><h3 class="card-title">States</h3>
+		        <a href="/states" class="btn btn-primary">Manage States</a></center></br>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-block">
+		       <center> <h3 class="card-title">Locactions</h3>
+		        <a href="/locations" class="btn btn-primary">Manage Locactions</a></center></br>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-block">
+		       <center> <h3 class="card-title">Contacts  </h3>
+		        <a href="/contacts" class="btn btn-primary">Manage Contacts</a></center></br>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-block">
+		       <center> <h3 class="card-title">Suppliers</h3>
+		        <a href="/suppliers" class="btn btn-primary">Manage  Suppliers</a></center></br>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		      <div class="card">
+		        <div class="card-block">
+		         <center> <h3 class="card-title">Clients</h3>
+		          <a href="/clients" class="btn btn-primary">Manage Clients</a></center></br>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+	</div>
+
+</body>
+</html>

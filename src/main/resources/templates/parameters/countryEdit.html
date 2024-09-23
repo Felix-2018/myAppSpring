@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit Country</title>
+</head>
+
+	  <div align="center">
+	        <h1>Edit Country</h1>
+	        <br />
+	        <form action="#" th:action="@{/countries}" th:object="${country}"
+	            method="post">
+	 
+	            <table border="0" cellpadding="10">  
+					<tr>             
+					    <td>Country ID:</td>
+					    <td>
+					        <input type="text" th:field="*{id}" readonly="readonly" />
+					    </td>
+					</tr>       
+	                <tr>             
+	                    <td>Description:</td>
+	                    <td>
+	                        <input type="text" th:field="*{description}" />
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>Country Code:</td>
+	                    <td><input type="text" th:field="*{code}" /></td>
+	                </tr>
+	                <tr>
+	                    <td>Capital City:</td>
+	                    <td><input type="text" th:field="*{capital}" /></td>
+	                </tr>
+	                <tr>
+	                    <td>Continent:</td>
+	                    <td><input type="text" th:field="*{continent}" /></td>
+	                </tr>      
+					<tr>
+					    <td>Nationality:</td>
+					    <td><input type="text" th:field="*{nationality}" /></td>
+					</tr>                          
+	                <tr>
+	                    <td colspan="2"><button type="submit" class="btn btn-success">Save</button> &nbsp;&nbsp;&nbsp;<a th:href="@{/countries}" button type="cancel" class="btn btn-success">Cancel</button></a>
+						</td>
+	                </tr>
+	            </table>
+	        </form>
+	    </div>
+		<div>
+			<table>
+		
+			<tr><td><center>
+			List of States in <input type="text" th:field="${country.description}" ></center>
+			</td>
+			</tr>
+			</table>
+				             <table>
+				               <thead>
+				                 <tr>
+				                   <th>
+				                    Capital
+				                   </th>
+				                   <th>Code</th>
+				                   <th>state ID</th>
+				                   <th>Details</th>
+								   <th>Name</th>
+								 </tr>
+				               </thead>
+				               <tbody>
+				                 <tr th:each="state : ${country.states}">
+			                        <td th:text="${state.capital}"></td>
+									<td th:text="${state.code}"></td>
+									<td th:text="${state.countryid}"></td>
+									<td th:text="${state.details}"></td>
+									<td th:text="${state.name}"></td>
+										                 </tr>
+
+				               </tbody>
+				             </table>
+			</div>
+	</body>
+</html>

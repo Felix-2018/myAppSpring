@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Edit State</title>
+</head>
+
+	  <div align="center">
+	        <h1>Edit State</h1>
+	        <br />
+	        <form action="#" th:action="@{/contacts}"  th:object="${contact}"  method="post">	 
+	            <table border="0" cellpadding="10">  
+					<tr>             
+					    <td>Contact ID:</td>
+					    <td>
+					        <input type="text" th:field="*{id}" readonly="readonly" />
+					    </td>
+					</tr>       
+	                <tr>             
+	                    <td>First Name:</td>
+	                    <td>
+	                        <input type="text" th:field="*{firstname}" />
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>Last Name:</td>
+						
+	                    
+							<td><input type="text" th:field="*{lastname}" />
+						</td>
+	                </tr>
+	                <tr>
+	                    <td>Mobile No:</td>
+	                    <td><input type="text" th:field="*{mobile}" /></td>
+	                </tr>
+	                <tr>
+	                    <td>Phone No:</td>
+	                    <td><input type="text" th:field="*{phone}" /></td>
+	                </tr>      
+					<tr>
+					    <td>Email:</td>
+					    <td><input type="text" th:field="*{email}" /></td>
+					</tr>                          
+	                <tr>
+						<tr>
+						    <td>Remarks:</td>
+						    <td><input type="text" th:field="*{remarks}" /></td>
+						</tr>                          
+						<tr>
+	                    <td colspan="2"><button type="submit" class="btn btn-success">Save</button> &nbsp;&nbsp;&nbsp;<a th:href="@{/contacts}" button type="cancel" class="btn btn-success">Cancel</button></a>
+						</td>
+	                </tr>
+	            </table>
+	        </form>
+	    </div>
+	</body>
+</html>

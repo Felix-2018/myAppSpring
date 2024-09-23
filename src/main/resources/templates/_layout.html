@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>.::SpringBoot::.</title>
+  <meta content="" name="description">
+  <meta conte
+  nt="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://www.w3schools.com/w3css/w3css_modal.asp">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">NiceAdmin</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/felix.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Felix Muthama</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Felix Muthama</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="/index">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>HR</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+			   <a href="/hr">
+			     <i class="bi bi-circle"></i><span>HR Home</span>
+			   </a>
+			 </li>
+			<li>
+            <a href="/employees">
+              <i class="bi bi-circle"></i><span>Employees</span>
+            </a>
+          </li>
+          <li>
+            <a href="/jobroles">
+              <i class="bi bi-circle"></i><span>Job Roles</span>
+            </a>
+          </li>
+          <li>
+            <a href="/departments">
+              <i class="bi bi-circle"></i><span>Departments</span>
+            </a>
+          </li>
+          <li>
+            <a href="/employeetypes">
+              <i class="bi bi-circle"></i><span>Employee Types</span>
+            </a>
+          </li>
+          <li>
+            <a href="/employeestatus">
+              <i class="bi bi-circle"></i><span>Employee Status</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>FLEET</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+						   <a href="/fleet">
+						     <i class="bi bi-circle"></i><span>Fleet Home</span>
+						   </a>
+						 </li>
+			<li>
+            <a href="/vehicles">
+              <i class="bi bi-circle"></i><span>Vehicles</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclemakers">
+              <i class="bi bi-circle"></i><span>Vehicles Makers</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclemodels">
+              <i class="bi bi-circle"></i><span>Vehicle Models</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclestatus">
+              <i class="bi bi-circle"></i><span>Vehicles Status</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehicletypes">
+              <i class="bi bi-circle"></i><span>Vehicles Types</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclehires">
+              <i class="bi bi-circle"></i><span>Vehicles Hires</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclemovements">
+              <i class="bi bi-circle"></i><span>Vehicles Movements</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vehiclemaintanance">
+              <i class="bi bi-circle"></i><span>Vehicles Maintanance</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Vehicles Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>HELP DESK</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+						   <a href="/helpdesk">
+						     <i class="bi bi-circle"></i><span>Help Desk Home</span>
+						   </a>
+						 </li>
+			<li>
+            <a href="/tickets">
+              <i class="bi bi-circle"></i><span>General Tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="/ticketstatus">
+              <i class="bi bi-circle"></i><span>Ticket Status<span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Help Desk Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>ACCOUNTS</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+						   <a href="/accounts">
+						     <i class="bi bi-circle"></i><span>Accounts Home</span>
+						   </a>
+						 </li>
+			<li>
+            <a href="/transactions">
+              <i class="bi bi-circle"></i><span>Transaction</span>
+            </a>
+          </li>
+          <li>
+            <a href="/transactiontype">
+              <i class="bi bi-circle"></i><span>Transaction Type</span>
+            </a>
+          </li>
+          <li>
+            <a href="/transactionstatus">
+              <i class="bi bi-circle"></i><span>Transaction Status</span>
+            </a>
+          </li>
+          <li>
+            <a href="/invoice">
+              <i class="bi bi-circle"></i><span>Invoice</span>
+            </a>
+          </li>
+          <li>
+            <a href="/invoicestatus">
+              <i class="bi bi-circle"></i><span>Invoice Status</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Accounts Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>PAYROLL</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+						   <a href="/payroll">
+						     <i class="bi bi-circle"></i><span>Payroll Home</span>
+						   </a>
+						 </li>
+			<li>
+            <a href="/payrol">
+              <i class="bi bi-circle"></i><span>Payroll</span>
+            </a>
+          </li>
+          <li>
+            <a href="/paylevels">
+              <i class="bi bi-circle"></i><span>Pay Levels</span>
+            </a>
+          </li>
+          <li>
+            <a href="/payslips">
+              <i class="bi bi-circle"></i><span>Pay Slips</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Payroll Nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nava" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-luggage"></i><span>PARAMETERS</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nava" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+			<li>
+						   <a href="/parameters">
+						     <i class="bi bi-circle"></i><span>Settings Home</span>
+						   </a>
+						 </li>
+			<li>
+            <a href="/modules">
+              <i class="bi bi-circle"></i><span>Modules</span>
+            </a>
+          </li>
+          <li>
+            <a href="/countries">
+              <i class="bi bi-circle"></i><span>Countries</span>
+            </a>
+          </li>
+          <li>
+            <a href="/states">
+              <i class="bi bi-circle"></i><span>States</span>
+            </a>
+          </li>
+          <li>
+            <a href="/locations">
+              <i class="bi bi-circle"></i><span>Locations</span>
+            </a>
+          </li>
+          <li>
+            <a href="/suppliers">
+              <i class="bi bi-circle"></i><span>Suppliers</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contacts">
+              <i class="bi bi-circle"></i><span>Contacts</span>
+            </a>
+          </li>
+          <li>
+            <a href="/clients">
+              <i class="bi bi-circle"></i><span>Clients</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Parameters Nav -->
+      
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+ <!--
+    <div class="pagetitle">
+      <h1>Countries</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div>< End Page Title -->
+
+    <section class="section">
+		<div layout:fragment="content">
+		   
+		</div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+  <script type="text/javascript" src="assets/js/country.js" th:src="@{/assets/js/country.js}"></script>
+  <script type="text/javascript" src="assets/js/state.js" th:src="@{/assets/js/state.js}"></script>
+  <script type="text/javascript" src="assets/js/location.js" th:src="@{/assets/js/location.js}"></script>
+  <script type="text/javascript" src="assets/js/client.js" th:src="@{/assets/js/client.js}"></script>
+  <script type="text/javascript" src="assets/js/contact.js" th:src="@{/assets/js/contact.js}"></script>
+  <script type="text/javascript" src="assets/js/supplier.js" th:src="@{/assets/js/supplier.js}"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><!-- jQuery base library needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> 
+  <script language="JavaScript">
+  	//$('document').ready(function () { // Line 1
+  	    $('#ddlCountryAdd').on('change',function () { // Line 2
+  	        $('#ddlStateAdd').empty().append('<option value="null">-SELECT-</option>'); // Line 3
+  	        var countryid = $(this).val(); //Line 4
+  	        var href = "http://localhost:8181/parameters/countries/" + countryid //Line 5
+  	        $.get(href, function (country, status) { // Line 6
+  	            var states = country.states; // Line 7
+  	            for (var i = 0; i <= states.length-1; i++) { // Line 8
+  	                $('#ddlStateAdd').append('<option value="' + states[i].id + '">' + states[i].name + '</option>'); // Line 9
+  	            }
+  	        })
+  	    })
+  	 
+
+		
+  	</script>
+</body>
+
+</html>
